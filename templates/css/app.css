@@ -1,3 +1,20 @@
 #map {
     height: 900px;
 }
+
+body {
+    background: #074E68;
+}
+
+h1 {
+    color: white;
+}
+
+.logo {
+    margin: 20px;
+    width: 72px;
+}
+.title {
+    display: inline-block;
+    vertical-align: middle;
+}
