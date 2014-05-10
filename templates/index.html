@@ -16,7 +16,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet'/>
-
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <style>
 
     </style>
@@ -28,13 +28,30 @@
     <img class="logo" src="/static/images/globe.png"/>
 
     <h1 class="title">NaTweet</h1>
-
-
+	<div id="controls">
+		<form id="mainForm">
+		<select id="langSelector"></select>
+		 
+		<label>Date:</label>
+		<input type="text" id="datepicker">
+		</form>
+		<div id="slider-container">
+		<p>
+			<label for="amount">Hours:</label>
+			<input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider-range"></div>
+		</div>
+		<button id="go">Go</button>
+ 
+	</div>
+    <div style="clear: both;">&nbsp;</div>
     <div id="map"></div>
 
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="/static/lib/leaflet/leaflet.js"></script>
 <script src="/static/lib/heatcanvas/heatcanvas.js"></script>
 <script src="/static/lib/heatcanvas/heatcanvas-worker.js"></script>
