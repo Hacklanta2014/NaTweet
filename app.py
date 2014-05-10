@@ -7,6 +7,7 @@ from pymongo import MongoClient
 # MONGODB_HOST = 'localhost'
 # MONGODB_PORT = 27017
 
+
 app = Flask(__name__)
 app.config.from_object(__name__)
 
@@ -74,8 +75,6 @@ def aUsersLang():
 #   elif request.method == 'GET':
 #     users = list(collection.find())
 #     return "UserList:"+str(users)
-
-
 
 if __name__ == '__main__':
   app.debug = True
