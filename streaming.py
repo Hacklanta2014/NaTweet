@@ -2,6 +2,9 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 
+#Atlanta bounding box including Cobb & Acworth
+loc = [-84.730682,33.502469,-83.94104,34.114079]
+
 # Go to http://dev.twitter.com and create an app.
 # The consumer key and secret will be generated for you after
 consumer_key=""
@@ -30,4 +33,4 @@ auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 
 stream = Stream(auth, l)
-stream.filter(locations=[-84.730682,33.502469,-83.94104,34.114079])
+stream.filter(locations = loc)
