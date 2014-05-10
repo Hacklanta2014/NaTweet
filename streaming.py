@@ -15,11 +15,7 @@ consumer_secret=""
 access_token=""
 access_token_secret=""
 
-class StdOutListener(StreamListener):
-    """ A listener handles tweets are the received from the stream.
-    This is a basic listener that just prints received tweets to stdout.
-
-    """
+class TwitterStreamListener(tweepy.StreamListener):
     def on_data(self, data):
         print data
         return True
@@ -27,7 +23,7 @@ class StdOutListener(StreamListener):
     def on_error(self, status):
         print status
 
-l = StdOutListener()
+l = TwitterStreamListener()
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 
